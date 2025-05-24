@@ -1,0 +1,10 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [
+    'build',
+    '-t', 'gcr.io/$PROJECT_ID/n8n:latest',  # You can change 'n8n:latest' if you prefer a different image name/tag
+    '-f', 'docker/images/n8n/Dockerfile',   # This is the path to the Dockerfile you just showed me
+    '.'                                     # This is the build context (the root of your repo)
+  ]
+images:
+- 'gcr.io/$PROJECT_ID/n8n:latest' # This should match the tag used in the 'build' step
