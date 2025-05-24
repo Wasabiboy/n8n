@@ -1,13 +1,14 @@
- ```yaml
- steps:
- - name: 'gcr.io/cloud-builders/docker'
-   args: [
-     'build',
-     '-t', 'gcr.io/$PROJECT_ID/n8n:latest',  # Or your desired image name/tag
-     '-f', 'docker/images/n8n/Dockerfile',   # Path to your n8n Dockerfile
-     '.'
-   ]
- images:
- - 'gcr.io/$PROJECT_ID/n8n:latest' # Should match the -t argument
- logsBucket: 'gs://dronemapper-43d80-cloudbuild-logs' # <<< THIS IS THE CRUCIAL ADDITION/CHANGE
- ```
+# Ensure this is at the very beginning of the file, no leading spaces
+steps:
+  - name: 'gcr.io/cloud-builders/docker' # Indented with 2 spaces (or more, but consistently)
+    args: [ # 'args' is at the same indentation level as 'name'
+      'build',
+      '-t', 'gcr.io/$PROJECT_ID/n8n:latest',
+      '-f', 'docker/images/n8n/Dockerfile',
+      '.'
+    ] # Closing bracket for args
+
+images: # Same indentation level as 'steps'
+  - 'gcr.io/$PROJECT_ID/n8n:latest' # Indented list item
+
+logsBucket: 'gs://dronemapper-43d80-cloudbuild-logs' # Same indentation level as 'steps' and 'images'
