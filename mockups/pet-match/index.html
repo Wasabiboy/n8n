@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetMatch – Social Pet Companion Finder</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-bar">
+        <div class="brand">
+          <span class="logo">🐾</span>
+          <span class="brand-name">PetMatch</span>
+        </div>
+        <button class="profile-button" aria-label="View profile">
+          <span class="profile-initials">ME</span>
+        </button>
+      </header>
+
+      <main class="main-content">
+        <section class="hero">
+          <div class="hero-copy">
+            <h1>Find playmates, training buddies, or forever friends</h1>
+            <p>
+              Swipe through nearby pets, filter by species or interests, and create
+              social adventures for your furry (or feathered) family.
+            </p>
+            <div class="hero-cta">
+              <button class="cta primary">Start Matching</button>
+              <button class="cta secondary">Explore Community</button>
+            </div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="map-card">
+              <div class="map-header">
+                <span class="map-title">Nearby Meetups</span>
+                <span class="map-distance">1.2 km</span>
+              </div>
+              <div class="map-body">
+                <div class="map-pin" style="top: 18%; left: 58%"></div>
+                <div class="map-pin" style="top: 52%; left: 28%"></div>
+                <div class="map-pin" style="top: 70%; left: 72%"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="filters" aria-label="Pet filters">
+          <div class="category-chip" data-category="all" role="button" tabindex="0">All</div>
+          <div class="category-chip" data-category="dog" role="button" tabindex="0">Dogs</div>
+          <div class="category-chip" data-category="cat" role="button" tabindex="0">Cats</div>
+          <div class="category-chip" data-category="bird" role="button" tabindex="0">Birds</div>
+          <div class="category-chip" data-category="other" role="button" tabindex="0">Other</div>
+        </section>
+
+        <section class="card-stack" aria-live="polite">
+          <div class="swipe-instruction">
+            <span>Swipe right to connect or left to skip</span>
+            <div class="swipe-arrows" aria-hidden="true">
+              <span class="arrow">⟵</span>
+              <span class="arrow">⟶</span>
+            </div>
+          </div>
+          <div id="card-container" class="cards"></div>
+          <div class="card-actions">
+            <button class="action reject" aria-label="Skip profile">
+              <span>Skip</span>
+            </button>
+            <button class="action info" aria-label="View training tips">
+              <span>Tips</span>
+            </button>
+            <button class="action like" aria-label="Match with profile">
+              <span>Match</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="tips" aria-labelledby="tips-title">
+          <div class="tips-header">
+            <h2 id="tips-title">Daily training & wellbeing tips</h2>
+            <a href="#" class="view-all">See all</a>
+          </div>
+          <div class="tips-grid">
+            <article class="tip-card">
+              <h3>Beach socialisation checklist</h3>
+              <p>
+                Pack floating toys, fresh water, and recall treats. Schedule with
+                other water-loving pets for a stress-free splash day.
+              </p>
+              <span class="chip">Dog</span>
+            </article>
+            <article class="tip-card">
+              <h3>Calming routines for shy cats</h3>
+              <p>
+                Introduce scent swapping and short play bursts before meetings to
+                build confidence with new feline friends.
+              </p>
+              <span class="chip">Cat</span>
+            </article>
+            <article class="tip-card">
+              <h3>Training games for clever parrots</h3>
+              <p>
+                Rotate talking prompts and reward mimicry sessions with social
+                flight time in safe indoor spaces.
+              </p>
+              <span class="chip">Bird</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="partners" aria-label="Partner promotions">
+          <h2>Supported by pet-loving partners</h2>
+          <div class="partner-strip">
+            <div class="partner-card">HappyPaws Treats</div>
+            <div class="partner-card">TrailTail Leashes</div>
+            <div class="partner-card">FeatherFolk Toys</div>
+            <div class="partner-card">GlowUp Groomers</div>
+          </div>
+        </section>
+      </main>
+
+      <nav class="bottom-nav" aria-label="Primary navigation">
+        <button class="nav-item active" aria-label="Discover">
+          <span class="icon">✨</span>
+          <span class="label">Discover</span>
+        </button>
+        <button class="nav-item" aria-label="Matches">
+          <span class="icon">💞</span>
+          <span class="label">Matches</span>
+        </button>
+        <button class="nav-item" aria-label="Events">
+          <span class="icon">📅</span>
+          <span class="label">Events</span>
+        </button>
+        <button class="nav-item" aria-label="Messages">
+          <span class="icon">💬</span>
+          <span class="label">Messages</span>
+        </button>
+      </nav>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
