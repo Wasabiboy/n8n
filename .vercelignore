@@ -1,0 +1,70 @@
+# Tests
+cypress/
+**/__tests__/
+**/*.test.ts
+**/*.test.js
+**/*.spec.ts
+**/*.spec.js
+test-workflows/
+
+# Documentation
+*.md
+!README.md
+docs/
+
+# Development files
+.vscode/
+.devcontainer/
+.lefthook/
+lefthook.yml
+
+# Build artifacts (will be regenerated)
+**/dist/
+**/.turbo/
+coverage/
+
+# Docker
+docker/
+Dockerfile*
+.dockerignore
+
+# CI/CD (not needed for Vercel)
+.github/
+cloudbuild.yaml
+.git-blame-ignore-revs
+
+# Node modules (handled by Vercel)
+node_modules/
+
+# Patches and scripts not needed for build
+patches/
+scripts/
+
+# Backend packages (only building frontend)
+packages/cli/
+packages/core/
+packages/node-dev/
+packages/nodes-base/
+packages/workflow/
+packages/@n8n/backend-common/
+packages/@n8n/db/
+packages/@n8n/task-runner/
+packages/@n8n/imap/
+packages/@n8n/permissions/
+packages/@n8n/integration-test-utils/
+packages/@n8n/benchmark/
+packages/@n8n/ai-workflow-builder/
+
+# Extensions
+packages/extensions/
+
+# Config files not needed
+jest.config.js
+codecov.yml
+biome.jsonc
+.prettierignore
+.prettierrc.js
+.editorconfig
+.npmignore
+.npmrc
+.gitattributes
