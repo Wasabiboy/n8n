@@ -1,5 +1,5 @@
 {
-  "buildCommand": "pnpm build:frontend",
+  "buildCommand": "turbo run build --filter=n8n-editor-ui...",
   "outputDirectory": "packages/frontend/editor-ui/dist",
   "installCommand": "pnpm install --frozen-lockfile",
   "framework": null,
